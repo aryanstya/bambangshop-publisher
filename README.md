@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # BambangShop Publisher App
 Tutorial and Example for Advanced Programming 2024 - Faculty of Computer Science, Universitas Indonesia
 
@@ -80,13 +77,12 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1) Dalam diagram pola Observer yang dijelaskan dalam buku *Head First Design Patterns*, *Subscriber* biasanya didefinisikan sebagai sebuah antarmuka (interface) yang menentukan bagaimana menerima pembaruan. Namun, dalam kasus *BambangShop*, *Subscriber* hanyalah sebuah *struct* yang hanya menyimpan data tanpa perilaku khusus. Karena semua *subscriber* memiliki cara kerja yang sama, maka penggunaan antarmuka atau *trait* tidak diperlukan untuk saat ini. Antarmuka hanya dibutuhkan jika terdapat berbagai jenis *subscriber* dengan perilaku yang berbeda. Oleh karena itu, cukup menggunakan satu *struct* saja.  
+
+2) *id* dalam *Program* dan *url* dalam *Subscriber* harus bersifat unik. Jika menggunakan *Vec* (list), penyimpanan nilai unik memang memungkinkan, tetapi kurang efisien. Anda perlu melakukan pengecekan duplikasi secara manual dan mencari elemen dalam daftar, yang akan menjadi lebih lambat seiring bertambahnya data. Sementara itu, *DashMap* menawarkan akses yang lebih cepat, menjamin keunikan berdasarkan *key*, dan memudahkan penghapusan data. Oleh karena itu, *DashMap* adalah pilihan yang lebih tepat untuk kasus ini.  
+
+3) Dalam pemrograman Rust, compiler memiliki aturan ketat untuk memastikan program aman dari *race condition* dalam lingkungan multi-*thread*. Pada variabel statis *SUBSCRIBERS*, kita menggunakan *DashMap* karena merupakan struktur data *HashMap* yang aman untuk penggunaan dalam banyak *thread*. Jika kita menerapkan pola *Singleton*, itu hanya akan memastikan ada satu instance global, tetapi tidak menjamin keamanan *thread*. Dalam kasus ini, karena beberapa *thread* dapat mengakses data secara bersamaan, *DashMap* tetap diperlukan untuk menghindari masalah *race condition* dan memastikan akses yang aman.
 
 #### Reflection Publisher-2
 
 #### Reflection Publisher-3
-<<<<<<< HEAD
-
-#### Reflection Publisher-4
->>>>>>> dcd544b (Initial commit with Product feature implemented.)
-=======
->>>>>>> 324fa74 (Update README.md)
