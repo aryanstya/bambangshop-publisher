@@ -85,4 +85,12 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-2
 
+1) Dalam pola *Model-View-Controller* (MVC) murni, *Model* bertanggung jawab atas penyimpanan data sekaligus logika bisnis. Namun, dalam praktik pengembangan perangkat lunak yang baik, memisahkan *Service* dan *Repository* dari *Model* sangat disarankan agar kode lebih terstruktur dan mudah dikelola. *Repository* berfokus pada pengelolaan akses data ke database, sedangkan *Service* menangani logika bisnis. Dengan pemisahan ini, kode menjadi lebih modular, mudah diuji, dan lebih fleksibel untuk perubahan di masa depan.  
+
+2) Jika hanya menggunakan *Model*, setiap model harus menangani semua aspek, termasuk penyimpanan data, logika bisnis, dan interaksi dengan database. Hal ini akan membuat kode lebih kompleks, sulit dipahami, dan meningkatkan ketergantungan antar *Model*. Sebagai contoh, jika *Program*, *Subscriber*, dan *Notification* harus saling berkomunikasi dalam satu *Model*, perubahan kecil di satu bagian dapat berdampak luas. Dengan adanya *Service* dan *Repository*, interaksi antar *Model* menjadi lebih terstruktur dan lebih mudah dikelola.  
+
+3) Ya, saya telah menggunakan Postman untuk menguji *API endpoints* dalam proyek saya. Alat ini sangat membantu dalam memastikan bahwa API berfungsi sesuai harapan sebelum diterapkan dalam sistem. Beberapa fitur yang menurut saya berguna adalah *request testing* untuk mengirim permintaan ke API, *automated testing* untuk mengotomatiskan pengujian API, dan *environment variables* yang memudahkan pengelolaan variabel dalam berbagai lingkungan pengembangan. Fitur-fitur ini sangat berguna untuk proyek kelompok maupun proyek *software engineering* di masa depan.
+
+
+
 #### Reflection Publisher-3
